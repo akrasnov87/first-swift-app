@@ -15,6 +15,13 @@
 		41A9068C261C8DE600F0DC49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A9068A261C8DE600F0DC49 /* LaunchScreen.storyboard */; };
 		41A90697261C8DE600F0DC49 /* mobniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A90696261C8DE600F0DC49 /* mobniusTests.swift */; };
 		41A906A2261C8DE600F0DC49 /* mobniusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906A1261C8DE600F0DC49 /* mobniusUITests.swift */; };
+		41A906B5261C8FB000F0DC49 /* Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906B4261C8FB000F0DC49 /* Generate.swift */; };
+		41A906BB261C906500F0DC49 /* RPCItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906BA261C906500F0DC49 /* RPCItem.swift */; };
+		41A906C0261C916A00F0DC49 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906BF261C916A00F0DC49 /* Utils.swift */; };
+		41A906C6261C930100F0DC49 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906C5261C930100F0DC49 /* UtilsTest.swift */; };
+		41A906CE261C9D8900F0DC49 /* SimpleItemQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906CD261C9D8900F0DC49 /* SimpleItemQuery.swift */; };
+		41A906FA261E0EC700F0DC49 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A906F9261E0EC700F0DC49 /* Params.swift */; };
+		41A9070B261E184700F0DC49 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9070A261E184700F0DC49 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		41A9069D261C8DE600F0DC49 /* mobniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A906A1261C8DE600F0DC49 /* mobniusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobniusUITests.swift; sourceTree = "<group>"; };
 		41A906A3261C8DE600F0DC49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41A906B4261C8FB000F0DC49 /* Generate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generate.swift; sourceTree = "<group>"; };
+		41A906BA261C906500F0DC49 /* RPCItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCItem.swift; sourceTree = "<group>"; };
+		41A906BF261C916A00F0DC49 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		41A906C5261C930100F0DC49 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
+		41A906CD261C9D8900F0DC49 /* SimpleItemQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleItemQuery.swift; sourceTree = "<group>"; };
+		41A906F9261E0EC700F0DC49 /* Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
+		41A9070A261E184700F0DC49 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		41A9067E261C8DE500F0DC49 /* mobnius */ = {
 			isa = PBXGroup;
 			children = (
+				41A906B2261C8EBD00F0DC49 /* core */,
 				41A9067F261C8DE500F0DC49 /* AppDelegate.swift */,
 				41A90681261C8DE500F0DC49 /* SceneDelegate.swift */,
 				41A90683261C8DE500F0DC49 /* ViewController.swift */,
@@ -113,6 +128,7 @@
 		41A90695261C8DE600F0DC49 /* mobniusTests */ = {
 			isa = PBXGroup;
 			children = (
+				41A906C4261C92DE00F0DC49 /* core */,
 				41A90696261C8DE600F0DC49 /* mobniusTests.swift */,
 				41A90698261C8DE600F0DC49 /* Info.plist */,
 			);
@@ -126,6 +142,43 @@
 				41A906A3261C8DE600F0DC49 /* Info.plist */,
 			);
 			path = mobniusUITests;
+			sourceTree = "<group>";
+		};
+		41A906B2261C8EBD00F0DC49 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				41A906F8261E0EB900F0DC49 /* rpc */,
+				41A906B3261C8EC800F0DC49 /* vnt */,
+				41A906BF261C916A00F0DC49 /* Utils.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		41A906B3261C8EC800F0DC49 /* vnt */ = {
+			isa = PBXGroup;
+			children = (
+				41A906B4261C8FB000F0DC49 /* Generate.swift */,
+			);
+			path = vnt;
+			sourceTree = "<group>";
+		};
+		41A906C4261C92DE00F0DC49 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				41A906C5261C930100F0DC49 /* UtilsTest.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		41A906F8261E0EB900F0DC49 /* rpc */ = {
+			isa = PBXGroup;
+			children = (
+				41A906CD261C9D8900F0DC49 /* SimpleItemQuery.swift */,
+				41A906BA261C906500F0DC49 /* RPCItem.swift */,
+				41A906F9261E0EC700F0DC49 /* Params.swift */,
+				41A9070A261E184700F0DC49 /* Filter.swift */,
+			);
+			path = rpc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A906FA261E0EC700F0DC49 /* Params.swift in Sources */,
+				41A906BB261C906500F0DC49 /* RPCItem.swift in Sources */,
+				41A906B5261C8FB000F0DC49 /* Generate.swift in Sources */,
+				41A906CE261C9D8900F0DC49 /* SimpleItemQuery.swift in Sources */,
 				41A90684261C8DE500F0DC49 /* ViewController.swift in Sources */,
 				41A90680261C8DE500F0DC49 /* AppDelegate.swift in Sources */,
 				41A90682261C8DE500F0DC49 /* SceneDelegate.swift in Sources */,
+				41A9070B261E184700F0DC49 /* Filter.swift in Sources */,
+				41A906C0261C916A00F0DC49 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A90697261C8DE600F0DC49 /* mobniusTests.swift in Sources */,
+				41A906C6261C930100F0DC49 /* UtilsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
