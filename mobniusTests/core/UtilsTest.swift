@@ -25,7 +25,7 @@ class UtilsTest: XCTestCase {
     }
     
     func testJsonStringWithObject() {
-        let obj = ExampleJson();
+        let obj = ExampleJson<String>();
         obj.name = "test"
         obj.params = [Params.string("Hello"), Params.bool(true), Params.integer(0), Params.null]
         
@@ -33,8 +33,8 @@ class UtilsTest: XCTestCase {
         XCTAssert(jsonString == "{\"name\":\"test\",\"params\":[\"Hello\",true,0,null]}")
     }
     
-    class ExampleJson: Codable {
+    class ExampleJson<T: Codable>: Codable {
         var name: String = ""
-        var params: [Params] = []
+        var params: [Params<T>] = []
     }
 }

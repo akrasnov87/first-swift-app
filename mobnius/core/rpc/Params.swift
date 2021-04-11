@@ -19,12 +19,19 @@ import Foundation
  ```
  
  */
-public enum Params : Codable {
+public enum Params<T: Codable>: Codable {
     case bool(Bool)
     case integer(Int)
     case string(String)
     case double(Double)
     case null
+    case filter(FilterItem)
+    case simpleItemQuery(QueryItem)
+    case queryData(QueryData)
+    /**
+     Для передачи объектов
+     */
+    case object(ParamObject<T>)
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -48,6 +55,23 @@ public enum Params : Codable {
             self = .null
             return
         }
+        if let x = try? container.decode(FilterItem.self) {
+            self = .filter(x)
+            return
+        }
+        if let x = try? container.decode(QueryItem.self) {
+            self = .simpleItemQuery(x)
+            return
+        }
+        if let x = try? container.decode(QueryData.self) {
+            self = .queryData(x)
+            return
+        }
+        if let x = try? container.decode(ParamObject<T>.self) {
+            self = .object(x)
+            return
+        }
+
         throw DecodingError.typeMismatch(Params.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Params"))
     }
 
@@ -61,10 +85,17 @@ public enum Params : Codable {
             case .integer(let x):
                 try container.encode(x)
             case .string(let x):
-                try container.encode(x)
-                
+                try container.encode(x)   
             case .null:
                 try container.encodeNil()
+            case .filter(let x):
+                try container.encode(x)
+            case .simpleItemQuery(let x):
+                try container.encode(x)
+            case .queryData(let x):
+                try container.encode(x)
+            case .object(let x):
+                try container.encode(x)
         }
     }
 }
