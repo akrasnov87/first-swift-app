@@ -42,4 +42,13 @@ public class Utils {
         
         return String(data: jsonData, encoding: .utf8)
     }
+    
+    /**
+     Преобразование строки в массив байтов
+     - parameter str: строка
+     - returns массив байтов
+     */
+    public static func toBytes(str: String) -> [UInt8] {
+        return [UInt8](str.utf8)
+    }
 }
